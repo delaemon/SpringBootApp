@@ -43,6 +43,16 @@ public class HelloController {
         model.addAttribute("msg", list);
         return "index";
     }
+    
+    @Autowired
+    PersonRepository repository;
+    
+    @RequestMapping("/person-view")
+    public String personView(Model model) {
+      Iterable<Person> list = repository.findAll();
+      model.addAttribute("results", list);
+      return "person-view";
+    }
 }
  
 class ViewData {
