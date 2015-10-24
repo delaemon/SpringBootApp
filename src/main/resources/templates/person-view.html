@@ -6,9 +6,15 @@
 </head>
 <body>
 <p>Personデータ表示:</p>
- 
-    <p th:text="${results}" />
- 
+<table>
+    <tr th:each="r : ${results}">
+    	<td><span th:text="${r.id}"></span></td>
+    	<td><span th:text="${r.name}"></span></td>
+     	<td><span th:text="${r.tel}"></span></td>
+     	<td><span th:text="${r.mail}"></span></td>
+    	<td><span th:text="${r.description}"></span></td>   
+    </tr>
+</table>
 <hr />
  
 <p>Personデータ追加:</p>

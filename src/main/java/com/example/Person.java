@@ -9,11 +9,11 @@ public class Person {
  
         @Id
         @GeneratedValue
-        protected Integer id;
-        protected String name;
-        protected String tel;
-        protected String mail;
-        protected String description;
+        public Integer id;
+        public String name;
+        public String tel;
+        public String mail;
+        public String description;
  
         public Person() {
           super();
